@@ -10,10 +10,16 @@
             box-sizing: border-box;
         }
 
+        body {
+            font-size: 24px;
+        }
+
         .container {
             background-image: url('./background.jpg');
             background-repeat: no-repeat;
-            background-size: contain;
+            background-size: cover;
+            background-position: center;
+            max-width: 650px;
         }
 
         .text-box {
@@ -22,16 +28,30 @@
             text-align: center;
             font-weight: bold;
             font-style: italic;
-            width: 600px;
             padding: 0px 60px 60px 60px;
             margin: 20px;
         }
 
         .text-box p {
-            font-size: 24px;
             color: yellow;
             margin-bottom: 40px;
             line-height: 30px;
+        }
+
+        @media screen and (max-width: 600px) {
+            body {
+                font-size: 20px;
+            }
+
+            .text-box {
+                display: inline-block;
+                border: 5px solid yellow;
+                text-align: center;
+                font-weight: bold;
+                font-style: italic;
+                padding: 0px 20px 60px 20px;
+                margin: 20px;
+            }
         }
     </style>
 </head>
@@ -44,7 +64,7 @@
             <p>Spatial Analysis</p>
             <p>Community and Regional Planning</p>
             <p>Legislative Advocacy</p>
-            <p>freddie@olinplanningconsulting.com Anchorage, AK</p>
+            <p>freddie@olinplanningconsulting.com<br>Anchorage, AK</p>
         </div>
     </div>
 </body>

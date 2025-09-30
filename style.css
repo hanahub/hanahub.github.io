@@ -239,3 +239,8 @@ footer {
   min-height: 314px;
   text-align: center;
 }
+.github-desc {
+  margin: 0px;
+  font-size: 14px;
+  color: #777;
+}

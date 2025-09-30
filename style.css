@@ -234,3 +234,8 @@ footer {
   padding-top: 24px;
   padding-bottom: 24px;
 }
+
+.github-history {
+  min-height: 314px;
+  text-align: center;
+}

@@ -342,21 +342,12 @@
       </div>
     </section>
 
-
-    <section class="support-me" style="text-align:center;padding:28px 0;color:#111827;">
-      <h3 style="margin:0 0 8px;font-size:20px;">Support my work</h3>
-      <p style="margin:0 0 12px;color:#374151;max-width:680px;margin-left:auto;margin-right:auto;">If my projects, guides, or open-source work helped you, consider buying me a coffee — it keeps the lights on and helps me build more useful tools and content.</p>
-      <a href="https://buymeacoffee.com/auleedev" target="_blank" rel="noopener noreferrer nofollow" aria-label="Buy me a coffee">
-        <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy me a coffee" style="border:0;height:54px;" />
-      </a>
-    </section>
-
     <!-- Contact section -->
     <section id="contact">
-      <h2 class="section-heading">Contact</h2>
-      <p style="color:#374151;max-width:720px;">Have a project, opportunity, or question? Send me a message and Ill get back to you.</p>
+      <h2 class="section-heading">Get In Touch</h2>
+      <p style="color:#374151;max-width:720px;">Have a project, opportunity, or question? Send me a message and I'll get back to you.</p>
 
-      <form id="contact-form" class="contact-form" novalidate>
+      <form id="contact-form" class="contact-form" action="https://formsubmit.co/fb8774046792e623efdaf98bed7368a9" method="POST" novalidate>
         <div class="form-row">
           <label for="name">Name</label>
           <input id="name" name="name" type="text" required placeholder="Your name" />
@@ -379,9 +370,17 @@
       <p style="margin-top:12px;color:#6b7280;font-size:13px;">Or email me directly at <a href="mailto:auleedev@gmail.com">auleedev@gmail.com</a></p>
     </section>
 
+    <section class="support-me" style="text-align:center;padding:28px 0;color:#111827;">
+      <h3 style="margin:0 0 8px;font-size:20px;">Support my work</h3>
+      <p style="margin:0 0 12px;color:#374151;max-width:680px;margin-left:auto;margin-right:auto;">If my projects, guides, or open-source work helped you, consider buying me a coffee — it keeps the lights on and helps me build more useful tools and content.</p>
+      <a href="https://buymeacoffee.com/auleedev" target="_blank" rel="noopener noreferrer nofollow" aria-label="Buy me a coffee">
+        <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy me a coffee" style="border:0;height:54px;" />
+      </a>
+    </section>
+
     <footer class="site-footer" style="text-align:center;padding:20px 0;color:#6b7280;font-size:14px;">
       <div>&copy; <span id="year">2025</span> Austin Lee</div>
-      <div>Made with <span style="color:#ef4444;">&hearts;</span> • <a href="mailto:auleedev@gmail.com">auleedev@gmail.com</a></div>
+      <div>Made with <span style="color:#ef4444;font-size:20px;">&hearts;</span> by Austin <a href="mailto:auleedev@gmail.com">auleedev@gmail.com</a></div>
     </footer>
     <script>
       // Set current year in footer
@@ -426,7 +425,7 @@
           // redirect disabled because we handle result here
           payload.append('_next', window.location.href);
 
-          fetch('https://formsubmit.co/ajax/auleedev@gmail.com', {
+          fetch('https://formsubmit.co/ajax/fb8774046792e623efdaf98bed7368a9', {
             method: 'POST',
             body: payload
           }).then(function(res){
@@ -436,7 +435,7 @@
               showStatus('Message sent — thank you!', true);
               form.reset();
             } else {
-              showStatus('Thanks — message submitted. (No JSON success flag)', true);
+              showStatus('Thanks — message submitted.', true);
               form.reset();
             }
           }).catch(function(err){

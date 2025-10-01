@@ -168,6 +168,31 @@ h2 { margin-top:0; font-size:20px; }
   font-size:13px;
   margin-bottom:4px;
 }
+
+.company-icon {
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:28px;
+  height:28px;
+  margin-right:8px;
+  margin-left:0;
+  background:#e5e7eb;
+  color:#1f2937;
+  border-radius:50%;
+  font-size:11px;
+  font-weight:700;
+  vertical-align:middle;
+}
+
+.company-logo {
+  width:28px;
+  height:28px;
+  margin-right:8px;
+  vertical-align:middle;
+  border-radius:50%;
+  display:inline-block;
+}
 .role {
   font-weight:600;
   margin-bottom:6px;
@@ -227,6 +252,35 @@ footer {
   margin-bottom: 18px;
   letter-spacing: 0.01em;
 }
+
+/* Contact form styles */
+.contact-form {
+  max-width: 720px;
+  margin: 12px 0 0 0;
+  display: block;
+}
+.contact-form .form-row {
+  margin-bottom: 12px;
+  display:flex;
+  flex-direction:column;
+}
+.contact-form label {
+  font-size:13px;
+  color:#374151;
+  margin-bottom:6px;
+}
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+  padding:10px 12px;
+  border:1px solid #e5e7eb;
+  border-radius:6px;
+  font-size:14px;
+}
+.contact-form textarea { resize: vertical; min-height:110px; }
+.contact-form .form-actions { display:flex; align-items:center; margin-top:6px; }
+.contact-form .btn { background:#10b981; }
+.contact-form #form-status { font-size:14px; }
 .card, section {
   margin-bottom: 38px;
 }

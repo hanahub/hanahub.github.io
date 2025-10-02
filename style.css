@@ -309,3 +309,8 @@ footer {
   font-size: 14px;
   color: #777;
 }
+.sponsors a {
+  font-size: 0px;
+  margin: 0 6px;
+  display: inline-block;
+}

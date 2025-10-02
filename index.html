@@ -22,7 +22,9 @@
         strokeStyle: "#ffffff",
       });
     });
+
   </script>
+
 </head>
 <body>
 
@@ -354,7 +356,6 @@
       </div>
     </section>
 
-    <!-- Contact section -->
     <section id="contact">
       <h2 class="section-heading">Get In Touch</h2>
       <p style="color:#374151;max-width:720px;">Have a project, opportunity, or question? Send me a message and I'll get back to you.</p>
@@ -385,80 +386,23 @@
     <section class="support-me" style="text-align:center;color:#111827;">
       <h3 style="margin:0 0 8px;font-size:20px;">Support my work</h3>
       <p style="margin:0 0 12px;color:#374151;max-width:680px;margin-left:auto;margin-right:auto;">If my projects, guides, or open-source work helped you, consider buying me a coffee — it keeps the lights on and helps me build more useful tools and content.</p>
-      <a href="https://buymeacoffee.com/auleedev" target="_blank" rel="noopener noreferrer nofollow" aria-label="Buy me a coffee">
-        <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy me a coffee" style="border:0;height:54px;" />
-      </a>
+      <div class="sponsors">
+        <a href="https://github.com/sponsors/hanahub" target="_blank">
+          <img src="https://img.shields.io/badge/Sponsor-💖-pink?style=for-the-badge" alt="Sponsor on GitHub" style="border-radius: 8px; height: 54px;"/>
+        </a>
+        <a href="https://buymeacoffee.com/auleedev" target="_blank" rel="noopener noreferrer nofollow" aria-label="Buy me a coffee">
+          <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy me a coffee" style="border:0;height:54px;" />
+        </a>
+      </div>
     </section>
 
     <footer class="site-footer" style="text-align:center;padding:20px 0;color:#6b7280;font-size:14px;">
       <div>&copy; <span id="year">2025</span> Austin Lee</div>
       <div>Made with <span style="color:#ef4444;font-size:20px;">&hearts;</span> by Austin <a href="mailto:auleedev@gmail.com">auleedev@gmail.com</a></div>
     </footer>
-    <script>
-      // Set current year in footer
-      (function(){
-        var y = new Date().getFullYear();
-        var el = document.getElementById('year');
-        if(el) el.textContent = y;
-      })();
-    </script>
-    <script>
-      // Contact form submission using formsubmit.co (AJAX)
-      (function(){
-        var form = document.getElementById('contact-form');
-        if(!form) return;
-
-        var statusEl = document.getElementById('form-status');
-
-        function showStatus(msg, ok){
-          statusEl.textContent = msg;
-          statusEl.style.color = ok ? '#059669' : '#b91c1c';
-        }
-
-        form.addEventListener('submit', function(e){
-          e.preventDefault();
-
-          // basic client-side validation
-          var name = form.name.value.trim();
-          var email = form.email.value.trim();
-          var message = form.message.value.trim();
-          if(!name || !email || !message){
-            showStatus('Please fill out all fields.', false);
-            return;
-          }
-
-          showStatus('Sending...', true);
-          var payload = new FormData();
-          payload.append('name', name);
-          payload.append('email', email);
-          payload.append('message', message);
-          // optional: add _subject to control email subject
-          payload.append('_subject', 'Portfolio contact form message');
-          // redirect disabled because we handle result here
-          payload.append('_next', window.location.href);
-
-          fetch('https://formsubmit.co/ajax/fb8774046792e623efdaf98bed7368a9', {
-            method: 'POST',
-            body: payload
-          }).then(function(res){
-            return res.json();
-          }).then(function(data){
-            if(data && data.success === 'OK'){
-              showStatus('Message sent — thank you!', true);
-              form.reset();
-            } else {
-              showStatus('Thanks — message submitted.', true);
-              form.reset();
-            }
-          }).catch(function(err){
-            console.error(err);
-            showStatus('Could not send message. Please try again or email auleedev@gmail.com', false);
-          });
-        });
-      })();
-    </script>
   </div>
 
-    <script src="https://www.sathwiky.dev/_next/static/chunks/app/page-e26217c0768a1925.js" async=""></script>
+  <script src="custom.js"></script>
+
 </body>
 </html>

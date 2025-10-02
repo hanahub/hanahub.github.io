@@ -59,3 +59,17 @@
     });
   });
 })();
+
+
+document.addEventListener( 'DOMContentLoaded', function() {
+  new Splide( '.splide', {
+    type: 'loop',
+    perPage: 1,
+    lazyLoad: 'nearby',
+    padding: '14%',
+    gap: 24,
+    autoScroll: {
+      speed: 2,
+    },
+  } ).mount(window.splide.Extensions);
+} );

@@ -370,5 +370,16 @@ img[data-error-replaced="1"] {
   height: 100% !important;
 }
 @media (max-width: 749px) {
-  /* strictly less than 750px */
+  .splide__arrow--next {
+    right: 6px;
+  }
+  .splide__arrow--prev {
+    left: 6px;
+  }
+}
+@media (max-width: 749px) {
+  .container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
 }

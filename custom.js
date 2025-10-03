@@ -61,19 +61,25 @@
 })();
 
 
-// document.addEventListener( 'DOMContentLoaded', function() {
-//   new Splide( '.splide', {
-//     type: 'loop',
-//     perPage: 1,
-//     lazyLoad: 'nearby',
-//     padding: '14%',
-//     gap: 24,
-//     // autoScroll: {
-//     //   speed: 2,
-//     // },
-//   } ).mount();
-//   // } ).mount(window.splide.Extensions);
-// } );
+document.addEventListener( 'DOMContentLoaded', function() {
+  new Splide( '.splide', {
+    type: 'loop',
+    perPage: 1,
+    lazyLoad: 'nearby',
+    padding: '14%',
+    gap: 24,
+    // autoScroll: {
+    //   speed: 2,
+    // },
+    breakpoints: {
+      749: {
+        padding: 0,
+        gap: 12,
+      },
+    }
+  } ).mount();
+  // } ).mount(window.splide.Extensions);
+} );
 
 // // Wrap project images with placeholder wrapper and fade in when loaded
 (function(){

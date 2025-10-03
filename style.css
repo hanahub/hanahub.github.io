@@ -322,3 +322,53 @@ footer {
   border-radius: 0%;
   height: 5em;
 }
+
+/* Project image placeholder wrapper: keeps layout and shows placeholder while image loads */
+.project-img-wrapper {
+  width:100%;
+  aspect-ratio: 475 / 317; /* reserve space to avoid layout shift */
+  background: linear-gradient(90deg, #f3f4f6 0%, #e6eef6 50%, #f3f4f6 100%);
+  display:block;
+  overflow:hidden;
+  position:relative;
+}
+
+/* spinner */
+.project-img-wrapper .spinner {
+  position:absolute;
+  left:50%;
+  top:50%;
+  width:36px;
+  height:36px;
+  margin-left:-18px;
+  margin-top:-18px;
+  border-radius:50%;
+  border: 4px solid rgb(205 205 205 / 80%);
+  border-top-color: #4b83f9;
+  animation: spin 1s linear infinite;
+}
+.project-img-wrapper.loaded .spinner { display:none; }
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+.project-img-wrapper img {
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+  opacity:0;
+  transform: scale(1.02);
+  transition: opacity 300ms ease, transform 400ms ease;
+}
+.project-img-wrapper img.loaded {
+  opacity:1;
+  transform: scale(1);
+}
+img[data-error-replaced="1"] {
+  height: 100% !important;
+}
+@media (max-width: 749px) {
+  /* strictly less than 750px */
+}
